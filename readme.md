@@ -61,8 +61,8 @@ var bug = new Schema({
     closed: { type: Boolean, required: true, default: false },
     description: { type: String, required: true },
     title: { type: String, required: true },
-    reportedBy: { type: String, required: true }, //The provided name for who reported the bug
     closedDate: { type: Date}
+    creatorEmail: { type: String, required: true }
 }, { timestamps: true, toJSON: { virtuals: true } })
 ```
 
@@ -72,12 +72,12 @@ var bug = new Schema({
 var note = new Schema({
     content: { type: String, required: true },
     bug: { type: ObjectId, ref: 'Bug' required: true },
-    reportedBy: { type: String, required: true }, //The provided name for who made the note
     flagged: { type: String, enum: ["pending", "completed", "rejected"] }
+    creatorEmail: { type: String, required: true }
 }, { timestamps: true, toJSON: { virtuals: true } })
 ```
 
-### Endpoints
+### Suggested Endpoints
 
 > baseUrl: `'https://localhost:3000/api'`
 
@@ -101,7 +101,7 @@ Put
 
 `/bugs/:id`: Edits bug
 
-`/bugs/:id/notes/:id`: Edits note. (not required)
+`/notes/:id`: Edits note. (not required)
 
 Delete
 
@@ -109,7 +109,7 @@ Delete
 
 `/bugs/:id`: Changes status of bug from open to close
 
-`/bugs/:id/notes/:id`: Deletes note.
+`notes/:id`: Deletes note.
 
 <hr>
 
@@ -128,6 +128,8 @@ Delete
 
 ### Functionality
 
+- Users Can Register, Login, and Logout (this should work out of the box, don't break it)
+- Users can only modify/delete data they created
 - Bugs can be created from the Home view
 - Bugs can be closed from the BugDetails view
 - User is prompted "are you sure?" when closing a Bug
@@ -142,7 +144,3 @@ Delete
 - Modals for creating Bugs
 - Modals for creating Notes
 - Use sweet alert for prompts
-
-# TESTING:
-
-go to http://localhost:3000/#/test-runner to use a testing suite for your server.
