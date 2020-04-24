@@ -18,9 +18,13 @@ export default {
     }
   },
   components: {
-    Navbar
-  }
+    Navbar,
+  },
 };
 </script>
 
-<style></style>
+<style lang="scss">
+@import "./assets/_variables.scss";
+@import "bootstrap";
+@import "./assets/_overrides.scss";
+</style>
