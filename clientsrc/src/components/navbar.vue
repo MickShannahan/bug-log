@@ -53,10 +53,10 @@ export default {
   methods: {
     async login() {
       await this.$auth.loginWithPopup();
-      this.$store.dispatch("setBearer", this.$auth.bearer);
-      console.log("this.$auth.user: ");
-      console.log(this.$auth.user);
-      this.$store.dispatch("getProfile");
+      if(this.$auth.isAuthenticated){
+        this.$store.dispatch("setBearer", this.$auth.bearer);
+        this.$store.dispatch("getProfile");
+      }
     },
     async logout() {
       this.$store.dispatch("resetBearer");
