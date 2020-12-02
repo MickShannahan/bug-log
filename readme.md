@@ -115,8 +115,6 @@ Delete
 
 ## Requirements
 
-### Visualization
-
 - At least 2 supported front end routes
   - Home shows all bugs
   - BugDetails displays the details of a bug and its Notes
@@ -125,9 +123,6 @@ Delete
 - Navbar to allow navigating back to Home view
 - Styling Indication on main page that bug is closed (color, strike-through, etc.)
 - Bugs display last modified date
-
-### Functionality
-
 - Users Can Register, Login, and Logout (this should work out of the box, don't break it)
 - Users can only modify/delete data they created
 - Bugs can be created from the Home view
