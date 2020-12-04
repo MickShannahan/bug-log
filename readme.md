@@ -17,10 +17,10 @@ Here are some mock-ups from the client.
 ### Home View:
 
 <div>
-  <img class="img-responsive" style="border: 1px solid black;padding: 10px" src="HomeView.jpg" />
+  <img class="img-responsive" style="border: 1px solid black;padding: 10px" src="https://bcw.blob.core.windows.net/public//5121483602573775" />
 </div>
 <div>
-  <img class="img-responsive" style="border: 1px solid black;padding: 10px" src="AddBug.jpg" />
+  <img class="img-responsive" style="border: 1px solid black;padding: 10px" src="https://bcw.blob.core.windows.net/public//2808270462320594" />
 </div>
 
 From the Home page users can view all the bugs that have been added, color coded to which are open and closed(by status). You should be able to filter the bugs based on their status(open or closed).
@@ -36,10 +36,10 @@ Try to implement pagination here(display limited number of bugs per page). Modal
 ### Details View:
 
 <div>
-  <img class="img-responsive"  style="border: 1px solid black;padding: 10px"  src="BugDetailsView.jpg" />
+  <img class="img-responsive"  style="border: 1px solid black;padding: 10px"  src="https://bcw.blob.core.windows.net/public//8985071489372842" />
 </div>
 <div>
-  <img class="img-responsive"  style="border: 1px solid black;padding: 10px"  src="AddComment.jpg" />
+  <img class="img-responsive"  style="border: 1px solid black;padding: 10px"  src="https://bcw.blob.core.windows.net/public//5901841787931381" />
 </div>
 
 The details view provides some additional information about the bug, as well as showing all the notes made by other users. Here notes can be created or removed.
